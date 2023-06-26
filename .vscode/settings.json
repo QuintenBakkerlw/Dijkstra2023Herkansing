@@ -1,0 +1,12 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "c:\\Users\\quint\\Dijkstra2023Herkansing",
+            "binaryPath": "c:\\Users\\quint\\Dijkstra2023Herkansing\\main",
+            "binaryArgs": []
+        }
+    ],
+    "files.associations": {
+        "iostream": "cpp"
+    }
+}
