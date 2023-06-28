@@ -27,7 +27,27 @@ int main(){
 
 
     vector<node*> eval = {start};
-    node* shortest;
+    vector<node*> test = {&a, &b, &c, &d};
+    node* shortestNode;
+    // int shortestPath = INT_MAX;
+    
+    // for (int i = 0; i< 50; i++){
+    //     int u = 0;
+    //     int j;
+    //         for(auto i : test){  
+    //         if (i->distanceToStart < shortestPath){
+    //             shortestPath = i->distanceToStart;
+    //             j = u;
+    //             test.erase(test.begin() + j);
+    //             test.push_back(i);
+    //         }
+    //             u += 1;
+    //             shortestPath = i->distanceToStart;
+    //         }
+            
+
+    // }
+    
 
     while (!eval.empty() == true)
     {   
@@ -38,7 +58,7 @@ int main(){
         for(auto i : eval){
                 if(i->distanceToStart < var){
                     y = x;
-                    shortest = i;
+                    shortestNode = i;
                     var = i->distanceToStart;
                 }
 
@@ -48,10 +68,10 @@ int main(){
             x += 1;
             };
     
-        for(auto i : shortest->edges){
-            if (shortest->distanceToStart + i->weight < i->to->distanceToStart){
+        for(auto i : shortestNode->edges){
+            if (shortestNode->distanceToStart + i->weight < i->to->distanceToStart){
                 // cout << shortest->distanceToStart + i->weight << ":" << i->to->distanceToStart << "\n";
-                i->to->setDistanceToStart(shortest->distanceToStart + i->weight);
+                i->to->setDistanceToStart(shortestNode->distanceToStart + i->weight);
                 i->to->prev = i->from;
                 // cout << i->from->name << ":  " << i->to->name << "\n";
                 if (find(eval.begin(), eval.end(), i->to) == eval.end()) {
@@ -60,19 +80,23 @@ int main(){
             }
         };
     }
-    
-    int distanceToEnd = end->distanceToStart;
-    vector<string> list = {end->name};
-    for(auto i : g.nodes){
-        if (find(list.begin(), list.end(), end->prev->name) == list.end()) {
-            list.push_back(end->prev->name);
-        }
-        end = end->prev;
-    }
 
-    for(auto i : list){
+
+    
+    // int distanceToEnd = end->distanceToStart;
+    // vector<string> list = {end->name};
+    // for(auto i : g.nodes){
+    //     if (find(list.begin(), list.end(), end->prev->name) == list.end()) {
+    //         list.push_back(end->prev->name);
+    //     }
+    //     end = end->prev;
+    // }
+
+    // cout << "\n" << distanceToEnd;
+
+    for(auto i :  g.path(g.nodes, end)){
         cout << i;
     }
-
-    cout << "\n" << distanceToEnd;
+    cout << g.distanceToPath(end);
+  
 } 

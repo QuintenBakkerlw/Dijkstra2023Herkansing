@@ -27,4 +27,5 @@ public:
     void setDistanceToStart(int d){
         distanceToStart = d;
     }
+
 };

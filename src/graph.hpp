@@ -14,4 +14,9 @@ class graph{
         this->nodes = nodes;
         this->edges = edges;
     }
+
+    vector<string> path(vector<node*> nodes, node* end);
+    int distanceToPath(node* end);
+
+    // node* shortestEdge(vector<edge*> edges);
 };
