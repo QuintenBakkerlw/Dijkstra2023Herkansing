@@ -1,4 +1,3 @@
-#include "node.hpp"
 
 class edge{
     public:

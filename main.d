@@ -1,1 +1,1 @@
-obj/main.o: src/main.cpp src/edge.hpp src/node.hpp
+obj/main.o: src/main.cpp src/graph.hpp src/node.hpp src/edge.hpp
