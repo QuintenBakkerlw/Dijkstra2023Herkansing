@@ -20,5 +20,6 @@ Bij stackoverflow heb ik meerdere keren een vraag gepost waarmee de community mi
 
 OPLETTEN !! Je moet opletten met het gebruik van edges want die zijn 1 richting edges ze gaan maar in 1 richting let hier goed op tijdens het maken.
 
+Dit is de voorbeeld graaf afgebeeld
 
 ![image](https://github.com/QuintenBakkerlw/Dijkstra2023Herkansing/assets/94842376/0a91ec6e-b318-4ded-88f3-92a46c29de47)
