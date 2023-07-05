@@ -1,22 +1,22 @@
 #include <iostream>
 #include "node.hpp"
 #include "edge.hpp"
-using namespace std;
+#include <queue>
+#include <string>
+
 
 class graph{
     private:
-    vector<edge*> edges;
+    std::vector<edge*> edges;
 
     public:
-    vector<node*> nodes;
+    std::vector<node*> nodes;
 
-    graph(vector<node*> nodes, vector<edge*> edges){
+    graph(std::vector<node*> nodes, std::vector<edge*> edges){
         this->nodes = nodes;
         this->edges = edges;
     }
 
-    vector<string> path(vector<node*> nodes, node* end);
-    int distanceToPath(node* end);
-
-    // node* shortestEdge(vector<edge*> edges);
+    std::vector<std::string> path(std::vector<node*> nodes, node* end);
+    int distanceToPath(node* end);    
 };

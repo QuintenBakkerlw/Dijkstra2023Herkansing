@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-using namespace std;
+
 
 class edge;
 
@@ -8,12 +8,12 @@ class edge;
 class node{
 
 public: 
-    string name;
+    std::string name;
     node* prev;
-    vector<edge*> edges;
+    std::vector<edge*> edges;
     int distanceToStart;
 
-    node(string name, vector<edge*> edges, int distanceToStart, node* prev){
+    node(std::string name, std::vector<edge*> edges, int distanceToStart, node* prev){
         this ->distanceToStart = distanceToStart;
         this ->edges = edges;
         this ->name = name;
@@ -27,5 +27,7 @@ public:
     void setDistanceToStart(int d){
         distanceToStart = d;
     }
+
+    
 
 };
